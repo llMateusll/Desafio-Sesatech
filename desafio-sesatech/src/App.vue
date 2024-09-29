@@ -1,5 +1,5 @@
 <template>
-  <router-view></router-view> <!-- Aqui renderizamos os componentes com base na rota -->
+  <router-view></router-view> 
 </template>
 
 <script>
@@ -8,6 +8,4 @@ export default {
 }
 </script>
 
-<style>
-/* Estilos globais, se necessário */
-</style>
+

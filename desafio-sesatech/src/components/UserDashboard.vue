@@ -70,13 +70,13 @@ import axios from 'axios';
 export default {
   data() {
     return {
-      items: [], // Dados da tabela
-      statusFilter: '', // Filtro de status
-      searchQuery: '', // Filtro de busca por nome
-      ordemFilter: '', // Filtro de busca por ordem de serviço
-      matriculaFilter: '', // Filtro de busca por matrícula
-      page: 1, // Página atual
-      totalPages: 3 // Total de páginas (ajustar conforme a resposta da API)
+      items: [], 
+      statusFilter: '', 
+      searchQuery: '', 
+      ordemFilter: '', 
+      matriculaFilter: '', 
+      page: 1, 
+      totalPages: 3 
     };
   },
   created() {
@@ -91,9 +91,9 @@ export default {
             Authorization: `Bearer ${token}`,
           },
         });
-        this.items = response.data[`page${this.page}`] || []; // Acesso ao array de valores
-        this.totalPages = response.data.totalPages || 3; // Atualiza o total de páginas se disponível
-        console.log('Dados recebidos:', this.items); // Para depuração
+        this.items = response.data[`page${this.page}`] || []; 
+        this.totalPages = response.data.totalPages || 3; 
+        console.log('Dados recebidos:', this.items);
       } catch (error) {
         console.error('Erro ao buscar dados do dashboard:', error);
       }
@@ -102,7 +102,7 @@ export default {
       const newPage = this.page + direction;
       if (newPage >= 1 && newPage <= this.totalPages) {
         this.page = newPage;
-        this.fetchData(); // Recarrega os dados ao mudar de página
+        this.fetchData(); 
       }
     }
   },

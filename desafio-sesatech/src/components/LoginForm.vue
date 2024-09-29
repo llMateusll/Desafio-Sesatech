@@ -36,19 +36,19 @@ export default {
     return {
       name: "",
       password: "",
-      errorMessage: null, // Corrigido para 'errorMessage'
+      errorMessage: null, 
     };
   },
   methods: {
     async handleLogin() {
-      this.errorMessage = ''; // Limpa a mensagem de erro antes de tentar logar
+      this.errorMessage = ''; 
       try {
         const response = await axios.post('http://localhost:8000/login', {
           name: this.name,
           password: this.password,
         });
         localStorage.setItem('token', response.data.accessToken);
-        this.$router.push('/dashboard'); // Certifique-se de que essa rota esteja definida no seu Vue Router
+        this.$router.push('/dashboard'); 
       } catch (error) {
         if (error.response && error.response.status === 401) {
           this.errorMessage = 'Login inválido.Tente novamente.';
