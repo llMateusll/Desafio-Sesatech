@@ -1,17 +1,18 @@
 <template>
   <div class="container">
+    <img alt="Vue logo" src="../assets/Sesa-fundo-branco.png">
     <div class="row justify-content-center">
       <div class="col-md-6">
         <h2 style="margin: 20px">Login</h2>
         <form @submit.prevent="handleLogin">
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" class="form-control" style="margin: 10px; text-align: center" id="name" v-model="name"
-              placeholder="Your name" required />
+            <input type="text" class="form-control" style="margin-top: 10px;margin-bottom: 10px;" id="name"
+              v-model="name" placeholder="Your name" required />
           </div>
           <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" style="margin: 10px; text-align: center" class="form-control" id="password"
+            <input type="password" style="margin-top: 10px;margin-bottom: 10px;" class="form-control" id="password"
               v-model="password" placeholder="Your password" required />
           </div>
           <div class="form-group">
@@ -58,9 +59,12 @@ export default {
 </script>
 
 <style scoped>
-.login-container {
-  max-width: 400px;
-  margin: auto;
-  padding-top: 100px;
+.container {
+  background: #402277;
+  width: 120%;
+  max-width: 600px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
 }
 </style>
