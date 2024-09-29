@@ -18,7 +18,10 @@
           <div class="form-group">
             <button type="submit" style="margin: 10px" class="btn btn-success">Login</button>
           </div>
-          <p v-if="errorMessage" class="text-danger">{{ errorMessage }}</p>
+          <!-- Smart alert para mensagens de erro -->
+          <div v-if="errorMessage" class="alert alert-danger" role="alert">
+            {{ errorMessage }}
+          </div>
         </form>
       </div>
     </div>
@@ -33,7 +36,7 @@ export default {
     return {
       name: "",
       password: "",
-      error: null,
+      errorMessage: null, // Corrigido para 'errorMessage'
     };
   },
   methods: {
@@ -48,7 +51,7 @@ export default {
         this.$router.push('/dashboard'); // Certifique-se de que essa rota esteja definida no seu Vue Router
       } catch (error) {
         if (error.response && error.response.status === 401) {
-          this.errorMessage = 'Login inválido. Por favor, tente novamente.';
+          this.errorMessage = 'Login inválido.Tente novamente.';
         } else {
           this.errorMessage = 'Ocorreu um erro. Por favor, tente novamente mais tarde.';
         }

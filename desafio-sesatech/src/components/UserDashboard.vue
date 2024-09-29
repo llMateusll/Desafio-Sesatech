@@ -1,11 +1,10 @@
 <template>
   <div class="container mt-4">
+    <img alt="Vue logo" src="../assets/Sesa-fundo-branco.png">
     <h1 class="mb-4 title">Dashboard</h1>
-
-
     <div class="mb-3 d-flex justify-content-between">
       <div class="me-2">
-        <label for="filter" class="form-label filter-label">Filtrar por Status:</label>
+        <label for="filter" class="form-label filter-label">Status:</label>
         <select v-model="statusFilter" id="filter" class="form-select">
           <option value="">Todos</option>
           <option value="in progress">Em andamento</option>
@@ -14,17 +13,17 @@
       </div>
 
       <div class="ms-2 flex-grow-1">
-        <label for="search" class="form-label filter-label">Buscar por Nome:</label>
+        <label for="search" class="form-label filter-label">Nome:</label>
         <input type="text" v-model="searchQuery" id="search" placeholder="Buscar por Nome" class="form-control" />
       </div>
 
       <div class="ms-2">
-        <label for="ordem" class="form-label filter-label">Filtrar por Ordem de Serviço:</label>
+        <label for="ordem" class="form-label filter-label">Ordem de Serviço:</label>
         <input type="text" v-model="ordemFilter" id="ordem" placeholder="Ordem de Serviço" class="form-control" />
       </div>
 
       <div class="ms-2">
-        <label for="matricula" class="form-label filter-label">Filtrar por Matrícula:</label>
+        <label for="matricula" class="form-label filter-label">Matrícula:</label>
         <input type="text" v-model="matriculaFilter" id="matricula" placeholder="Matrícula" class="form-control" />
       </div>
     </div>
@@ -132,6 +131,8 @@ export default {
 .title {
   color: #01D87A;
   font-weight: bold;
+  font-size: 30px;
+  margin-top: 25px;
 }
 
 .filter-label {
