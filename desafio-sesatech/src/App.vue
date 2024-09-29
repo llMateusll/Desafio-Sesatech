@@ -1,16 +1,14 @@
 <template>
-    <img alt="Vue logo" src="./assets/Sesa-fundo-branco.png">
-  <login/>
+  <img alt="Vue logo" src="./assets/Sesa-fundo-branco.png">
+  <router-view></router-view> <!-- Aqui renderizamos os componentes com base na rota -->
 </template>
 
 <script>
-import login from './components/LoginForm.vue'
-
 export default {
-  name: 'App',
-  components: {
-    login
-  }
+  name: 'App'
 }
 </script>
 
+<style>
+/* Estilos globais, se necessário */
+</style>
